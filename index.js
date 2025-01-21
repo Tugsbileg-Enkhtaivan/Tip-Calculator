@@ -4,10 +4,8 @@ const billInput = document.getElementById("bill-input");
 const resetButton = document.getElementById("reset-button");
 
 const sanitizeBillInput = (input) => {
-  // Зөвхөн number авна.
   input = input.replace(/[^\d.]/g, "");
 
-  // Зөвхөн 1 бутархайн (.) авна.
   if ((input.match(/\./g) || []).length > 1) {
     input = input.slice(0, -1);
   }
